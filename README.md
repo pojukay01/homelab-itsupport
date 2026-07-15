@@ -11,7 +11,8 @@ CompTIA A+/Tech+ and an MS in Cybersecurity (in progress).
 - Created a Windows Server 2025 virtual machine in VirtualBox 
   (4GB RAM, 2 CPUs, 60GB virtual disk)
 - Set up GitHub repository to document the project
-- <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/6a44469b-9eb5-4039-8328-c84a3abcb30e" />
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/c22bf2bb-aeb5-4986-857b-6441d13a3366" />
+
 
 
 ## Day 2
