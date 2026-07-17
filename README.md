@@ -1,3 +1,57 @@
+Project Summary: IT Support & Cybersecurity Home Lab
+Objective: Build a simulated small-business IT environment to develop hands-on skills in systems administration, virtualization, and troubleshooting — supporting a transition into IT Support/Help Desk roles, backed by CompTIA A+/Tech+ and an MS in Cybersecurity (in progress).
+Environment Built
+
+Hypervisor: Oracle VirtualBox
+VM 1 — Windows Server 2025 (Standard, Desktop Experience): 4GB RAM, 2 CPUs, 60GB disk, EFI boot
+VM 2 — Ubuntu 26.04 LTS (Desktop): 4GB RAM, 2 CPUs, 30GB disk, EFI boot
+Documentation: Public GitHub repository (homelab-itsupport) tracking progress day-by-day with screenshots
+
+Milestones Completed
+Foundation Setup
+
+Verified host system requirements (RAM, 64-bit OS, CPU virtualization support)
+Installed VirtualBox and downloaded both target OS images
+Built and configured both virtual machines from scratch
+
+Troubleshooting: VM Boot Failure
+
+Encountered a persistent "No bootable medium found" error and black-screen hangs on Windows Server, despite correct ISO attachment and boot order
+Diagnosed the root cause as a Hyper-V / Virtual Machine Platform conflict — Windows' built-in virtualization features were competing with VirtualBox for hardware-level virtualization access
+Resolved by disabling Hyper-V, Virtual Machine Platform, Windows Hypervisor Platform, and WSL via Windows Features, then rebuilding the VM using EFI boot mode
+Successfully installed Windows Server 2025 (Desktop Experience)
+
+Windows Server Configuration
+
+Applied Windows Server security updates
+Installed VirtualBox Guest Additions to resolve display scaling issues and enable proper auto-resize
+
+Ubuntu Installation
+
+Completed full interactive installation (disk erase/setup, account creation, no encryption for lab purposes)
+Installed Guest Additions via terminal — resolved a missing bzip2/tar dependency mid-install, compiled kernel modules manually
+Confirmed working display auto-resize
+
+In Progress: Active Directory Domain Services
+
+Currently installing the AD DS role on Windows Server 2025 via Server Manager, working toward promoting the server to a domain controller
+
+Skills Demonstrated So Far
+
+Virtual machine provisioning and hardware allocation (CPU, RAM, storage, boot configuration)
+Operating system installation (Windows Server and Linux)
+Root-cause troubleshooting of low-level virtualization conflicts
+Command-line package management and dependency resolution (Linux/apt)
+Technical documentation and version control practices (Git/GitHub)
+Working knowledge of EFI vs. BIOS boot processes
+
+Next Steps
+
+Complete AD DS installation and promote server to domain controller
+Create Organizational Units, user accounts, and Group Policy Objects
+Join Ubuntu/Windows client to the domain
+Introduce a ticketing system (osTicket) to simulate help desk workflows
+
 # IT Support & Cybersecurity Home Lab
 
 Documenting a self-built home lab to practice IT support, systems 
